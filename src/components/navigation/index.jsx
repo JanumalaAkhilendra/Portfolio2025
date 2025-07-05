@@ -1,6 +1,7 @@
 "use client";
 import { BtnList } from "@/app/data";
 import React from "react";
+import SpaceButton from "../SpaceButton";
 import NavButton from "./NavButton";
 import useScreenSize from "../hooks/useScreenSize";
 import ResponsiveComponent from "../ResponsiveComponent";
@@ -43,7 +44,7 @@ const Navigation = () => {
                 const x = `calc(${radius}*${Math.cos(angleRad)})`;
                 const y = `calc(${radius}*${Math.sin(angleRad)})`;
 
-                return <NavButton key={btn.label} x={x} y={y} {...btn} />;
+                return <SpaceButton key={btn.label} x={x} y={y} {...btn} />;
               })}
             </motion.div>
           ) : (

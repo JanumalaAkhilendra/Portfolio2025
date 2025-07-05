@@ -70,7 +70,7 @@ const ProjectLayout = ({
         variants={item}
         href={demoLink}
         target="_blank"
-        className={`relative flex flex-col w-[300px] h-full p-6 rounded-2xl overflow-hidden ${colors.bg} ${colors.border} shadow-xl hover:shadow-2xl transition-all duration-300`}
+        className={`relative flex flex-col justify-center w-[350px] h-full p-6 rounded-2xl overflow-hidden ${colors.bg} ${colors.border} shadow-xl hover:shadow-2xl transition-all duration-300`}
         whileHover={{ 
           y: -5,
           scale: 1.03,

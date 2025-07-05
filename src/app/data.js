@@ -178,6 +178,12 @@ export const BtnList = [
     icon: "resume",
     newTab: true,
   },
+  {
+    label: "Leetcode",
+    link: "https://leetcode.com/u/janumala_akhilendra/",
+    icon: "Code",
+    newTab: true,
+  },
 ];
 
 
