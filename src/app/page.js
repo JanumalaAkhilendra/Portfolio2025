@@ -4,12 +4,21 @@ import Image from "next/image";
 import { useEffect, useState, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-
+import OrbitRing from "@/components/OrbitingRing";
 import SpaceButton from "@/components/SpaceButton";
 import SpaceStationModel from "@/components/models/SpaceStationModel";
 import Navigation from "@/components/navigation";
 import SpaceModel from "@/components/models/SpaceModel";
 import Loader from "@/components/Loader/Loader";
+
+
+const orbitIcons = [
+  { icon: "/icons/github.svg", label: "GitHub", href: "https://github.com" },
+  { icon: "/icons/linkedin.svg", label: "LinkedIn", href: "https://linkedin.com" },
+  { icon: "/icons/x.svg", label: "Twitter", href: "https://x.com" },
+  // add more...
+];
+
 
 export default function Home() {
   const [isLaptop, setIsLaptop] = useState(false);
@@ -53,7 +62,9 @@ export default function Home() {
           </CanvasWrapper>
         </Suspense>
       </div>
-
+      {/* <StarsBackground /> */}
+      
+     
       <div className="w-full h-screen">
         {/* Navigation (only shown after model loads) */}
         {canvasLoaded && (
@@ -92,11 +103,27 @@ export default function Home() {
                   enablePan={true}
                 />
                 <SpaceStationModel scale={[0.5, 0.5, 0.5]} />
+                <OrbitRing radius={2.2} /> {/* 👈 Add orbiting icons */}
+
               </Canvas>
             </CanvasWrapper>
           </Suspense>
         </div>
       </div>
+
+      <a
+        href="https://www.buymeacoffee.com/janumalaakr"
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-4 right-4 z-50"
+      >
+        <img
+          src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+          alt="Buy Me A Coffee"
+          className="h-8 w-auto sm:h-10 md:h-12 lg:h-[50px] xl:h-[50px]"
+        />
+      </a>
+
     </main>
   );
 }
