@@ -37,9 +37,9 @@ const SpaceButton = ({ label = "SPACE", href = "/", imgsrc = "../../spacebutton3
         ) : (
           <strong>{label}</strong>
         )}
-        <div id="container-stars">
+        {/* <div id="container-stars">
           <img src={imgsrc} alt="" />
-        </div>
+        </div> */}
       </Link>
     </StyledWrapper>
   );
@@ -57,7 +57,7 @@ const StyledWrapper = styled.div`
     border-radius: 5rem;
     transition: 0.5s;
     animation: gradient_301 5s ease infinite;
-    border: double 2px transparent;
+    border: double 4px transparent;
     background-image: linear-gradient(#212121, #212121), linear-gradient(137.48deg, #4e1f5f 10%, #0d226a 45%, #8F51EA 67%, #0044ff 87%);
     background-origin: border-box;
     background-clip: content-box, border-box;
